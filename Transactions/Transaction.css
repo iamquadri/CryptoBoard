@@ -1,0 +1,45 @@
+
+
+body{
+    /* grid-template-columns: 17rem auto 30rem; */
+    grid-template-columns: 17rem auto;
+}
+
+.transactionsTable {
+    height: fit-content;
+    margin-top: 6rem;
+}
+
+.transactionsTable th {
+    text-align: center;
+    padding: 0.8rem;
+}
+
+.transactionsTable td {
+    padding: 1rem;
+}
+
+.transactionsTable tbody tr:nth-child(odd)  {
+    background: var(--color-light);
+}
+
+ 
+/* ----------------------------MEDIA QUERIES TABLETS ---------------- */
+@media screen and (max-width: 1024px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* -----------------MEDIA QUERIES (mobiles)-------------------- */
+@media screen and (max-width: 600px) {
+    .transactionsTable thead tr, .transactionsTable tbody tr  {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .transactionsTable tbody tr:nth-child(even) {
+        border-left: 2px  solid var(--color-white);
+    }
+}
